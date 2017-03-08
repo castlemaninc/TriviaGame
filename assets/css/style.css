@@ -140,3 +140,7 @@ button:focus {
 #numberCorrect, #questionTotal {
 	color: darkgreen;
 }
+
+#platos_academy {
+	text-align: center;
+}
