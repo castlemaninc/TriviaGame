@@ -24,8 +24,13 @@ function newGame(){
     }
     // if score message is showing ...
     if(!$("score").hasClass("hidden")){
-        hide it by adding the class hidden
+        //hide it by adding the class hidden
         $("#score").addClass("hidden");
+    }
+
+    if(!$("#platos_academy").hasClass("hidden")){
+        //hide it by adding the class hidden
+        $("#platos_academy").addClass("hidden");
     }
     // set all radio buttons to unchecked 
     $("input[type=radio]").prop('checked', false);
@@ -42,10 +47,7 @@ function newGame(){
 
     //display the first question in the question array 
     $(questionArr[0]).show();
-
-    $("#score").addClass("hidden");
-    // $("#numberCorrect").addClass("hidden");
-
+    
     //initiates the setInterval function called game
     game();
     
@@ -82,6 +84,9 @@ function game() { startTimer = setInterval(function(){
     		// hide the question
             $(questionArr[questionCount]).hide();
 
+            //increase incorrect total by 1
+            incorrect++;
+
             // increase questionCount by 1
     		questionCount++;
             console.log("You have finished " + questionCount + " out of " + questionArr.length +" questions")
@@ -117,6 +122,7 @@ function game() { startTimer = setInterval(function(){
           
         if (answer === "correct"){
             console.log("The answer is correct");
+            // increase correct answers total 
             correct++;
             
             // hide the question
@@ -136,17 +142,19 @@ function game() { startTimer = setInterval(function(){
             $("#correct").removeClass("hidden");
 
             // newTimer();
-            setTimeout(function(){               
+            setTimeout(function(){ 
+
                 // show next question    
                 $(questionArr[questionCount]).show();
                 //reset the timer before the next question
                 newTimer();
                 //re-hide Time's Up message
                 $("#correct").addClass("hidden");                
-            }, 3000);
+            }, 2000);
             
         } else if (answer === "incorrect"){
             console.log("The answer is incorrect");
+            //increase incorrect answers total
             incorrect++;
 
             // hide the question
@@ -175,7 +183,7 @@ function game() { startTimer = setInterval(function(){
                 //re-hide "Wrong!" message
                 $("#incorrect").addClass("hidden");
                 
-            }, 3000);
+            }, 2000);
             
         } else if (correct + incorrect === questionArr.length){
             // if 10 questions have been answered 

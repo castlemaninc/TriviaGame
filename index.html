@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Audiowide|Roboto+Condensed" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cinzel|PT+Serif" rel="stylesheet">
 
 </head>
 
@@ -13,13 +14,16 @@
 
 
 <div class="container">
-	<h1>Trivia Time</h1>
+	<h1>Philosophical Trivia</h1>
 	<div class="timer">	
 		<h3>Time Remaining: <span id="digits">30</span><span id="timeup" class="hidden">Time's Up!</span></h3>
 
 	</div>
 
 	<div class="trivia">
+
+		<div id="platos_academy"><p>"In Plato's Academy, before the temple of the Muses was written: 'Let None But Geometers Enter Here'.</p><br>
+		<p>Press <strong>'Begin'</strong> to begin a new game.</p></div>
 		
 		<div id="correct" class="hidden">
 			<h2>CORRECT!</h2>
@@ -38,102 +42,103 @@
 				
 		<div id="question-holder">
 			<div class="questions" id="question1">
-				<h3 class="question">Question1</h3><br>
+				<h3 class="question">Which of the following is a red herring argument that claims that since a proposition cannot be disproven, it must be true or likely?</h3><br>
 				<ul class="answers">
-					<input type="radio" name="q1" value="incorrect">Answer 1<br/>
-					<input type="radio" name="q1" value="incorrect">Answer 2<br/>
-					<input type="radio" name="q1" value="correct">Answer 3<br/>
-					<input type="radio" name="q1" value="incorrect">Answer 4<br/>
+					<input type="radio" name="q1" value="incorrect">Ad Verecundiam<br/>
+					<input type="radio" name="q1" value="incorrect">False Dichotomy<br/>
+					<input type="radio" name="q1" value="correct">Appeal to Ignorance<br/>
+					<input type="radio" name="q1" value="incorrect">Burden of Proof<br/>
 				</ul>
 			</div>
 
 			<div class="questions" id="question2">
-				<h3 class="question">Question2</h3><br>
+				<h3 class="question">Which Greek philosopher and student of Plato, went on to found his own school, Lyceum?  Hint: His writings on logic are the earliest known attempt to explain logic in a systematic way.</h3><br>
 				<ul class="answers">
-					<input type="radio" name="q2" value="correct">Answer 1<br/>
-					<input type="radio" name="q2" value="incorrect">Answer 2<br/>
-					<input type="radio" name="q2" value="incorrect">Answer 3<br/>
-					<input type="radio" name="q2" value="incorrect">Answer 4<br/>
+					<input type="radio" name="q2" value="correct">Aristotle<br/>
+					<input type="radio" name="q2" value="incorrect">Socrates<br/>
+					<input type="radio" name="q2" value="incorrect">Protagoras<br/>
+					<input type="radio" name="q2" value="incorrect">Gottfried Leibniz<br/>
 				</ul>
 			</div>
 
 			<div class="questions" id="question3">
-				<h3 class="question">Question3</h3><br>
+				<h3 class="question">Name the Informal Fallacy: <br> A fallacy of presupposition argument that is based on the hidden assumption that a collective whole determines that all of its parts be like the whole.</h3><br>
 				<ul class="answers">
-					<input type="radio" name="q3" value="incorrect">Answer 1<br/>
-					<input type="radio" name="q3" value="correct">Answer 2<br/>
-					<input type="radio" name="q3" value="incorrect">Answer 3<br/>
-					<input type="radio" name="q3" value="incorrect">Answer 4<br/>
+					<input type="radio" name="q3" value="incorrect">Fallacy of Analogy<br/>
+					<input type="radio" name="q3" value="correct">Fallacy of Division<br/>
+					<input type="radio" name="q3" value="incorrect">Fallacy of Precision<br/>
+					<input type="radio" name="q3" value="incorrect">False Cause<br/>
 				</ul>
 			</div>
 
 			<div class="questions" id="question4">
-				<h3 class="question">Question4</h3><br>
+				<h3 class="question">Which type of logic can be defined as: <br>
+				Reasoning in the abstract, focused on deductive reasoning, in which validity is based soley on the structure(form) and the premises imply a necessary conclusion?</h3><br>
 				<ul class="answers">
-					<input type="radio" name="q4" value="incorrect">Answer 1<br/>
-					<input type="radio" name="q4" value="incorrect">Answer 2<br/>
-					<input type="radio" name="q4" value="incorrect">Answer 3<br/>
-					<input type="radio" name="q4" value="correct">Answer 4<br/>
+					<input type="radio" name="q4" value="incorrect">Predicate Logic<br/>
+					<input type="radio" name="q4" value="incorrect">Informal Logic<br/>
+					<input type="radio" name="q4" value="incorrect">Modal Logic<br/>
+					<input type="radio" name="q4" value="correct">Formal Logic<br/>
 				</ul>
 			</div>
 
 			<div class="questions" id="question5">
-				<h3 class="question">Question5</h3><br>
+				<h3 class="question">He was an Enlightenment-era English philosopher known for his championing of empiricism, an epistemology based on inductive reasoning.</h3><br>
 				<ul class="answers">
-					<input type="radio" name="q5" value="correct">Answer 1<br/>
-					<input type="radio" name="q5" value="incorrect">Answer 2<br/>
-					<input type="radio" name="q5" value="incorrect">Answer 3<br/>
-					<input type="radio" name="q5" value="incorrect">Answer 4<br/>
+					<input type="radio" name="q5" value="correct">John Locke<br/>
+					<input type="radio" name="q5" value="incorrect">Gottfried Leibniz<br/>
+					<input type="radio" name="q5" value="incorrect">David Hume<br/>
+					<input type="radio" name="q5" value="incorrect">William of Ockham<br/>
 				</ul>
 			</div>
 
 			<div class="questions" id="question6">
-				<h3 class="question">Question6</h3><br>
+				<h3 class="question">A branch of metaphysics concerned with the nature and relations of being.</h3><br>
 				<ul class="answers">
-					<input type="radio" name="q6" value="incorrect">Answer 1<br/>
-					<input type="radio" name="q6" value="correct">Answer 2<br/>
-					<input type="radio" name="q6" value="incorrect">Answer 3<br/>
-					<input type="radio" name="q6" value="incorrect">Answer 4<br/>
+					<input type="radio" name="q6" value="incorrect">Epistemology<br/>
+					<input type="radio" name="q6" value="correct">Ontology<br/>
+					<input type="radio" name="q6" value="incorrect">Etymology<br/>
+					<input type="radio" name="q6" value="incorrect">Theology<br/>
 				</ul>
 			</div>
 
 			<div class="questions" id="question7">
-				<h3 class="question">Question7</h3><br>
+				<h3 class="question">Charles Lutwidge Dodgson, better known by his pen name Lewis Carroll, wrote two books on Symbolic Logic. Which of the following books did he also write?</h3><br>
 				<ul class="answers">
-					<input type="radio" name="q7" value="incorrect">Answer 1<br/>
-					<input type="radio" name="q7" value="incorrect">Answer 2<br/>
-					<input type="radio" name="q7" value="correct">Answer 3<br/>
-					<input type="radio" name="q7" value="incorrect">Answer 4<br/>
+					<input type="radio" name="q7" value="incorrect">Oliver Twist<br/>
+					<input type="radio" name="q7" value="incorrect">Frankenstein<br/>
+					<input type="radio" name="q7" value="correct">Alice's Adventures in Wonderland<br/>
+					<input type="radio" name="q7" value="incorrect">Pride and Prejudice<br/>
 				</ul>
 			</div>
 
 			<div class="questions" id="question8">
-				<h3 class="question">Question8</h3><br>
+				<h3 class="question">Diogenes the Cynic, plucked the feathers from a chicken, brought it to Plato’s school, and said, "Here is Plato’s man!" Choose the answer that best describes Plato's definition of a man.</h3><br>
 				<ul class="answers">
-					<input type="radio" name="q8" value="incorrect">Answer 1<br/>
-					<input type="radio" name="q8" value="incorrect">Answer 2<br/>
-					<input type="radio" name="q8" value="incorrect">Answer 3<br/>
-					<input type="radio" name="q8" value="correct">Answer 4<br/>
+					<input type="radio" name="q8" value="incorrect">Coq au Vin<br/>
+					<input type="radio" name="q8" value="incorrect">Domesticated Fowl<br/>
+					<input type="radio" name="q8" value="incorrect">Leghorn Chicken<br/>
+					<input type="radio" name="q8" value="correct">Featherless Biped<br/>
 				</ul>
 			</div>
 
 			<div class="questions" id="question9">
-				<h3 class="question">Question9</h3><br>
+				<h3 class="question">Epistemology is the study of:</h3><br>
 				<ul class="answers">
-					<input type="radio" name="q9" value="incorrect">Answer 1<br/>
-					<input type="radio" name="q9" value="correct">Answer 2<br/>
-					<input type="radio" name="q9" value="incorrect">Answer 3<br/>
-					<input type="radio" name="q9" value="incorrect">Answer 4<br/>
+					<input type="radio" name="q9" value="incorrect">Letters<br/>
+					<input type="radio" name="q9" value="correct">Knowledge<br/>
+					<input type="radio" name="q9" value="incorrect">Beauty<br/>
+					<input type="radio" name="q9" value="incorrect">Goodness<br/>
 				</ul>
 			</div>
 
 			<div class="questions" id="question10" >
-				<h3 class="question">Question10</h3><br>
+				<h3 class="question">In Gottfried Leibniz's method we assume a statement to be true and see what conclusions we can draw from it. If, when drawing these conclusions, we get a contradiction, we know that the intitial statement is false, because contradictions are always false. What is this method called? </h3><br>
 				<ul class="answers">
-					<input type="radio" name="q10" value="correct">Answer 1<br/>
-					<input type="radio" name="q10" value="incorrect">Answer 2<br/>
-					<input type="radio" name="q10" value="incorrect">Answer 3<br/>
-					<input type="radio" name="q10" value="incorrect">Answer 4<br/>
+					<input type="radio" name="q10" value="correct">Reductio ad Absurdum<br/>
+					<input type="radio" name="q10" value="incorrect">Incompleteness Theorem<br/>
+					<input type="radio" name="q10" value="incorrect">Propositional Calculus<br/>
+					<input type="radio" name="q10" value="incorrect">Syllogism<br/>
 				</ul>
 			</div>
 		</div>
@@ -141,7 +146,7 @@
 
 	</div>
 
-	<button class="btn" id="start">Start</button>
+	<button class="btn" id="start">Begin</button>
 	
 	<p id="copyright">&copy; Copyright Bryan Castleman 2017</p>
 
