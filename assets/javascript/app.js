@@ -1,44 +1,34 @@
 
-//You'll create a trivia game that shows only one question until the player answers it or their time runs out.
-
-//If the player selects the correct answer, show a screen congratulating them for choosing the right option. After a few seconds, display the next question -- do this without user input.
-
-
-//The scenario is similar for wrong answers and time-outs.
-	//If the player runs out of time, tell the player that time's up and display the correct answer. Wait a few seconds, then show the next question.
-	//If the player chooses the wrong answer, tell the player they selected the wrong option and then display the correct answer. Wait a few seconds, then show the next question.
-
-
-//On the final screen, show the number of correct answers, incorrect answers, and an option to restart the game (without reloading the page).
-
-
-
+// Trivia Game 
 
 var questionArr = ["#question1","#question2","#question3","#question4","#question5", "#question6", "#question7", "#question8", "#question9", "#question10"];
 var questionName = ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10"];
 
 
 var startTimer;
-
 var questionCount = 0;
-
 var time = 30;
-
 var answer;
-
 var correct = 0;
 var incorrect = 0;
 
 
 // new game function starts a new game
 function newGame(){
-
+    // hide all of the questions 
     hideQuestions();
-    // check to see if GAME OVER message is showing
+    // if game over message is showing..
     if(!$("#gameOver").hasClass("hidden")){
-        // if game message is showing hide it by adding the class hidden
+        //  hide it by adding the class hidden
         $("#gameOver").addClass("hidden");
     }
+    // if score message is showing ...
+    if(!$("score").hasClass("hidden")){
+        hide it by adding the class hidden
+        $("#score").addClass("hidden");
+    }
+    // set all radio buttons to unchecked 
+    $("input[type=radio]").prop('checked', false);
 
     //reset question count to 0
     questionCount = 0;
@@ -47,7 +37,7 @@ function newGame(){
     correct = 0;
     incorrect = 0;
 
-    //reset time remaining to 10
+    //reset time remaining to 30
     time = 30;
 
     //display the first question in the question array 
@@ -71,7 +61,6 @@ function newTimer(){
 function hideQuestions(){    
     $(".questions").hide();    
 }
-
 
 
 // game function set for 1 second intervals
@@ -123,8 +112,7 @@ function game() { startTimer = setInterval(function(){
 
         // conditional statements based on user activity
 
-        // get the value of the checked answer 
-        
+        // get the value of the chosen answer (the radio button that is checked)        
         answer = $("input[type=radio][name=" + questionName[questionCount] + "]:checked").val();
           
         if (answer === "correct"){
@@ -148,17 +136,13 @@ function game() { startTimer = setInterval(function(){
             $("#correct").removeClass("hidden");
 
             // newTimer();
-
-            setTimeout(function(){                 
-                
+            setTimeout(function(){               
                 // show next question    
                 $(questionArr[questionCount]).show();
                 //reset the timer before the next question
                 newTimer();
                 //re-hide Time's Up message
-                $("#correct").addClass("hidden");
-
-                
+                $("#correct").addClass("hidden");                
             }, 3000);
             
         } else if (answer === "incorrect"){
@@ -171,9 +155,6 @@ function game() { startTimer = setInterval(function(){
             // increase questionCount by 1
             questionCount++;
             console.log("You have finished " + questionCount + " out of " + questionArr.length +" questions")
-
-            // // show next question    
-            // $(questionArr[questionCount]).show();
 
             console.log("Correct:" + correct);
             console.log("Incorrect:" + incorrect);
