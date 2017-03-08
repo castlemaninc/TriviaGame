@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<title>Trivia Game</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Audiowide|Roboto+Condensed" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<div class="container">
+	<h1>Trivia Time</h1>
+	<div class="timer">	
+		<h3>Time Remaining: <span id="digits">30</span><span id="timeup" class="hidden">Time's Up!</span></h3>
+
+	</div>
+
+	<div class="trivia">
+		
+		<div id="correct" class="hidden">
+			<h2>CORRECT!</h2>
+		</div>
+
+		<div id="incorrect" class="hidden">
+			<h2>Wrong!</h2>
+		</div>
+
+		<div id="gameOver" class="hidden">
+			<h2>GAME OVER</h2>
+		</div>
+		<div id="score" class = "hidden">
+			<p>You answered <span id="numberCorrect"></span> of <span id="questionTotal">10</span> questions correctly.</p>
+		</div>
+				
+		<div id="question-holder">
+			<div class="questions" id="question1">
+				<h3 class="question">Question1</h3><br>
+				<ul class="answers">
+					<input type="radio" name="q1" value="incorrect">Answer 1<br/>
+					<input type="radio" name="q1" value="incorrect">Answer 2<br/>
+					<input type="radio" name="q1" value="correct">Answer 3<br/>
+					<input type="radio" name="q1" value="incorrect">Answer 4<br/>
+				</ul>
+			</div>
+
+			<div class="questions" id="question2">
+				<h3 class="question">Question2</h3><br>
+				<ul class="answers">
+					<input type="radio" name="q2" value="correct">Answer 1<br/>
+					<input type="radio" name="q2" value="incorrect">Answer 2<br/>
+					<input type="radio" name="q2" value="incorrect">Answer 3<br/>
+					<input type="radio" name="q2" value="incorrect">Answer 4<br/>
+				</ul>
+			</div>
+
+			<div class="questions" id="question3">
+				<h3 class="question">Question3</h3><br>
+				<ul class="answers">
+					<input type="radio" name="q3" value="incorrect">Answer 1<br/>
+					<input type="radio" name="q3" value="correct">Answer 2<br/>
+					<input type="radio" name="q3" value="incorrect">Answer 3<br/>
+					<input type="radio" name="q3" value="incorrect">Answer 4<br/>
+				</ul>
+			</div>
+
+			<div class="questions" id="question4">
+				<h3 class="question">Question4</h3><br>
+				<ul class="answers">
+					<input type="radio" name="q4" value="incorrect">Answer 1<br/>
+					<input type="radio" name="q4" value="incorrect">Answer 2<br/>
+					<input type="radio" name="q4" value="incorrect">Answer 3<br/>
+					<input type="radio" name="q4" value="correct">Answer 4<br/>
+				</ul>
+			</div>
+
+			<div class="questions" id="question5">
+				<h3 class="question">Question5</h3><br>
+				<ul class="answers">
+					<input type="radio" name="q5" value="correct">Answer 1<br/>
+					<input type="radio" name="q5" value="incorrect">Answer 2<br/>
+					<input type="radio" name="q5" value="incorrect">Answer 3<br/>
+					<input type="radio" name="q5" value="incorrect">Answer 4<br/>
+				</ul>
+			</div>
+
+			<div class="questions" id="question6">
+				<h3 class="question">Question6</h3><br>
+				<ul class="answers">
+					<input type="radio" name="q6" value="incorrect">Answer 1<br/>
+					<input type="radio" name="q6" value="correct">Answer 2<br/>
+					<input type="radio" name="q6" value="incorrect">Answer 3<br/>
+					<input type="radio" name="q6" value="incorrect">Answer 4<br/>
+				</ul>
+			</div>
+
+			<div class="questions" id="question7">
+				<h3 class="question">Question7</h3><br>
+				<ul class="answers">
+					<input type="radio" name="q7" value="incorrect">Answer 1<br/>
+					<input type="radio" name="q7" value="incorrect">Answer 2<br/>
+					<input type="radio" name="q7" value="correct">Answer 3<br/>
+					<input type="radio" name="q7" value="incorrect">Answer 4<br/>
+				</ul>
+			</div>
+
+			<div class="questions" id="question8">
+				<h3 class="question">Question8</h3><br>
+				<ul class="answers">
+					<input type="radio" name="q8" value="incorrect">Answer 1<br/>
+					<input type="radio" name="q8" value="incorrect">Answer 2<br/>
+					<input type="radio" name="q8" value="incorrect">Answer 3<br/>
+					<input type="radio" name="q8" value="correct">Answer 4<br/>
+				</ul>
+			</div>
+
+			<div class="questions" id="question9">
+				<h3 class="question">Question9</h3><br>
+				<ul class="answers">
+					<input type="radio" name="q9" value="incorrect">Answer 1<br/>
+					<input type="radio" name="q9" value="correct">Answer 2<br/>
+					<input type="radio" name="q9" value="incorrect">Answer 3<br/>
+					<input type="radio" name="q9" value="incorrect">Answer 4<br/>
+				</ul>
+			</div>
+
+			<div class="questions" id="question10" >
+				<h3 class="question">Question10</h3><br>
+				<ul class="answers">
+					<input type="radio" name="q10" value="correct">Answer 1<br/>
+					<input type="radio" name="q10" value="incorrect">Answer 2<br/>
+					<input type="radio" name="q10" value="incorrect">Answer 3<br/>
+					<input type="radio" name="q10" value="incorrect">Answer 4<br/>
+				</ul>
+			</div>
+		</div>
+		
+
+	</div>
+
+	<button class="btn" id="start">Start</button>
+	
+	<p id="copyright">&copy; Copyright Bryan Castleman 2017</p>
+
+</div>
+
+
+	<!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+
+    <!-- Script -->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+
+</html>

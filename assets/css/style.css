@@ -1,0 +1,136 @@
+body {
+	background-image: url("../images/squares.png");	
+	font-family: 'Roboto Condensed', sans-serif;
+	color:#282A36;
+}
+
+h1 {
+	font-size:2.2em;
+	text-align:center;
+	font-family: 'Audiowide', cursive;	
+}
+
+h2 {
+	font-size:1.6em;
+}
+
+h3 {
+	font-size:1.2em;
+}
+
+span {
+	color: #E06E48;
+	font-weight:bold;
+	font-size:1.3em;
+	font-family:monospace;
+}
+
+.container {
+	width:660px;
+	background-color:#B7CFA3;	
+	margin:auto;
+	margin-top:30px;
+	border-radius:10px;
+	border: 3px solid #3B85BF;
+	border: 3px solid lawngreen;
+	padding:20px;
+}
+
+.timer {
+	width:600px;
+	background-color:#C4FF94;
+	margin:auto;
+	margin-top:20px;
+	border-radius:10px;
+	padding:20px;
+}
+
+#timeup {
+	float:right;
+}
+
+.trivia {
+	width:600px;
+	background-color:#C4FF94;
+	margin:auto;
+	margin-top:20px;
+	margin-bottom:20px;
+	border-radius:10px;
+	padding:20px;
+	line-height: 1.2em;
+}
+
+#copyright {
+	color: #84AD8F;
+	font-size:.7em;
+	text-align:center;
+}
+
+.btn {
+  background: #40FF45;
+  background-image: -webkit-linear-gradient(top, #40FF45, #2FBA33);
+  background-image: -moz-linear-gradient(top, #40FF45, #2FBA33);
+  background-image: -ms-linear-gradient(top, #40FF45, #2FBA33);
+  background-image: -o-linear-gradient(top, #40FF45, #2FBA33);
+  background-image: linear-gradient(to bottom, #40FF45, #2FBA33);
+  -webkit-border-radius: 22;
+  -moz-border-radius: 22;
+  border-radius: 22px;
+  text-shadow: 1px 1px 3px #666666;
+  font-family: Arial;
+  color: #ffff8c;
+  font-size: 20px;
+  padding: 10px 30px 10px 30px;
+  border: solid #2FBA33 1px;
+  text-decoration: none;
+  display:block;
+  margin: auto;
+  margin-bottom:20px;
+}
+
+.btn:hover {
+  background: #76ba27;
+  background-image: -webkit-linear-gradient(top, #76ba27, #519437);
+  background-image: -moz-linear-gradient(top, #76ba27, #519437);
+  background-image: -ms-linear-gradient(top, #76ba27, #519437);
+  background-image: -o-linear-gradient(top, #76ba27, #519437);
+  background-image: linear-gradient(to bottom, #76ba27, #519437);
+  text-decoration: none;
+}
+
+button:focus {
+	outline:0;
+}
+
+.hidden {
+	/*visibility:hidden;*/
+	display: none;
+}
+
+.none {
+	display: none;
+}
+
+#correct {
+	text-align:center;
+	color:green;
+}
+
+#incorrect {
+	text-align:center;
+	color:#E06E48;
+}
+
+#gameOver {
+	text-align: center;
+	color: #E06E48;
+}
+
+#score {
+	text-align: center;
+	margin-top:20px;
+}
+
+#numberCorrect, #questionTotal {
+	color: darkgreen;
+}
