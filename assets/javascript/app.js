@@ -3,7 +3,7 @@
 
 var questionArr = ["#question1","#question2","#question3","#question4","#question5", "#question6", "#question7", "#question8", "#question9", "#question10"];
 var questionName = ["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10"];
-
+var correctAnswers = ["Appeal to Ignorance","Aristotle","Fallacy of Division","Formal Logic","John Locke","Ontology","Alice's Adventures in Wonderland","Featherless Biped","Knowledge","Reductio ad Absurdum"];
 
 var startTimer;
 var questionCount = 0;
@@ -11,6 +11,8 @@ var time = 30;
 var answer;
 var correct = 0;
 var incorrect = 0;
+
+var correctAnswer = "";
 
 
 // new game function starts a new game
@@ -72,7 +74,6 @@ function game() { startTimer = setInterval(function(){
     	time--;
               
         // if the 30 second timer runs out... 
-
     	if (time>=0 && time<31){
     		console.log(time);
     		//display time left in the digits span element
@@ -83,16 +84,14 @@ function game() { startTimer = setInterval(function(){
     		console.log("Time's up!");
     		// hide the question
             $(questionArr[questionCount]).hide();
-
+            $("#incorrect").removeClass("hidden");                        
+            $("#correct_answer").html(correctAnswers[questionCount]);
             //increase incorrect total by 1
             incorrect++;
 
             // increase questionCount by 1
     		questionCount++;
-            console.log("You have finished " + questionCount + " out of " + questionArr.length +" questions")
-
-            // show next question    
-    		$(questionArr[questionCount]).show();
+            console.log("You have finished " + questionCount + " out of " + questionArr.length +" questions");   		
 
     		// display Time's Up
     		$("#timeup").removeClass("hidden");
@@ -101,8 +100,12 @@ function game() { startTimer = setInterval(function(){
     		setTimeout(function(){ 
                 //reset the timer before the next question
     			newTimer();
+                // show next question  
+                $(questionArr[questionCount]).show();
     			//re-hide Time's Up message
     			$("#timeup").addClass("hidden");
+                //re-hide incorrect div 
+                $("#incorrect").addClass("hidden");
     		}, 3000);
 
     	} else if (questionCount===questionArr.length){
@@ -115,8 +118,7 @@ function game() { startTimer = setInterval(function(){
             return;                        
         } 
 
-        // conditional statements based on user activity
-
+        // conditional statements based on user guesses       
         // get the value of the chosen answer (the radio button that is checked)        
         answer = $("input[type=radio][name=" + questionName[questionCount] + "]:checked").val();
           
@@ -130,11 +132,8 @@ function game() { startTimer = setInterval(function(){
 
             // increase questionCount by 1
             questionCount++;
+
             console.log("You have finished " + questionCount + " out of " + questionArr.length +" questions")
-
-            // // show next question    
-            // $(questionArr[questionCount]).show();
-
             console.log("Correct:" + correct);
             console.log("Incorrect:" + incorrect);
 
@@ -143,7 +142,6 @@ function game() { startTimer = setInterval(function(){
 
             // newTimer();
             setTimeout(function(){ 
-
                 // show next question    
                 $(questionArr[questionCount]).show();
                 //reset the timer before the next question
@@ -159,6 +157,8 @@ function game() { startTimer = setInterval(function(){
 
             // hide the question
             $(questionArr[questionCount]).hide();
+
+            $("#correct_answer").html(correctAnswers[questionCount]);
 
             // increase questionCount by 1
             questionCount++;
